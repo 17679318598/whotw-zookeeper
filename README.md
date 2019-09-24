@@ -9,5 +9,5 @@
 **内容**
 1. java操作zk、SpringBoot简单实现zk服务注册  >>>> doc/java_zk.md
 2. 临时[顺序]节点+事件通知实现分布式锁  >>>> doc/distributed_lock.md
-
+3. zk集群搭建 >>>> doc/zk_cluster.md
 
