@@ -8,11 +8,17 @@
 
 + 集群配置
 
-1. 每台服务器conf/zoo.cfg配置如下
-````
-server.1=zk1_ip:2888:3888
-server.2=zk2_ip:2888:3888
-server.3=zk3_ip:2888:3888
-````
-2. 每台zk服务器data/目录下配置myid文件[内容为数字，代表权重]
-
+    1. 每台zk服务器conf/zoo.cfg配置如下
+    ````
+    server.1=zk1_ip:2888:3888
+    server.2=zk2_ip:2888:3888
+    server.3=zk3_ip:2888:3888
+    #server.3=zk3_ip:2888:3888:observer   ##observer类型，不可参与选举
+    ````
+    2. 每台zk服务器配置myid文件 
+    ````
+    dataDir=/var/lib/zookeeper[zoo.cfg]   ###myid文件目录
+    /var/lib/zookeeper删除该目录下所有内容后创建myid文件
+    每台zk服务器的myid内容为zoo.cfg对应server.x 的x值
+    
+    ````
